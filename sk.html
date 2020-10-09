@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ban phim</title>
+</head>
+<body>
+<img id="ride book" src="https://i.ytimg.com/vi/3PMU-aDtbEk/hqdefault.jpg" style="position:absolute;left:0; top:0;" height="130" width="150"/>
+<p align="center"><img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/00e7132d-28d1-4f26-82a6-324756fece8a/de2nddl-e759427e-3e32-49c8-b435-0fbd438f8f69.png/v1/fill/w_484,h_250,strp/dx_seiken_swordriver_by_nottofree_de2nddl-250t.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOiIsImlzcyI6InVybjphcHA6Iiwib2JqIjpbW3sicGF0aCI6IlwvZlwvMDBlNzEzMmQtMjhkMS00ZjI2LTgyYTYtMzI0NzU2ZmVjZThhXC9kZTJuZGRsLWU3NTk0MjdlLTNlMzItNDljOC1iNDM1LTBmYmQ0MzhmOGY2OS5wbmciLCJoZWlnaHQiOiI8PTQ2NSIsIndpZHRoIjoiPD05MDAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uud2F0ZXJtYXJrIl0sIndtayI6eyJwYXRoIjoiXC93bVwvMDBlNzEzMmQtMjhkMS00ZjI2LTgyYTYtMzI0NzU2ZmVjZThhXC9ub3R0b2ZyZWUtNC5wbmciLCJvcGFjaXR5Ijo5NSwicHJvcG9ydGlvbnMiOjAuNDUsImdyYXZpdHkiOiJjZW50ZXIifX0.pC_HK9xT-4tHpMXyZIm8QeRZphLvKyGMTpzDZNCyDkw"></p>
+<body onload="docReady()">
+<script>
+    function upArrowPressed() {
+        let element = document.getElementById("ride book");
+        element.style.top = parseInt(element.style.top) - 5 + 'px';
+    }
+    function downArrowPressed() {
+        var element = document.getElementById("ride book");
+        element.style.top = parseInt(element.style.top) + 5 + 'px';
+    }
+    function leftArrowPressed() {
+        var element = document.getElementById("ride book");
+        element.style.left = parseInt(element.style.left) - 5 + 'px';
+    }
+    function rightArrowPressed() {
+        var element = document.getElementById("ride book");
+        element.style.left = parseInt(element.style.left) + 5 + 'px';
+
+    }
+    function moveSelection(evt) {
+        switch (evt.keyCode) {
+            case 37:
+                leftArrowPressed();
+                break;
+            case 39:
+                rightArrowPressed();
+                break;
+            case 38:
+                upArrowPressed();
+                break;
+            case 40:
+                downArrowPressed();
+                break;
+        }
+    }
+    function docReady() {
+        window.addEventListener('keydown', moveSelection);
+    }
+</script>
+</body>
+</html>
